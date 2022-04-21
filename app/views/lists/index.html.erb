@@ -1,27 +1,55 @@
-<% @lists.each do |list| %>
-     <h1> <%= list.name %>  </h1>
-     <p> <%= link_to "See the list", list_path(list) %> </p>
-  <% end %>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Add a new list
-</button>
+<!-- BANNER -->
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">What's the name of your movie list?</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <%= simple_form_for [@list] do |f| %>
-            <%= f.input :name %>
-            <%= f.submit "Create list", class: "btn btn-primary" %>
-         <% end %>
+<div class= "banner-background">
+  <div class= "banner-title">
+
+    <h1> Welcome to <br> the Watch List! </h1>
+    <p> Create unlimited lists with your favorite movies of all time </p>
+
+    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Create a list!
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">What's the name of your movie list?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <%= simple_form_for [@list] do |f| %>
+                <%= f.input :name %>
+                <%= f.submit "Create list", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
+  <div class= "banner-image">
+    <%= image_tag "clapperboard.png", alt: "movie clapperboard", width: 250 %>
+  </div>
+  <div class="custom-shape-divider-bottom-1650582608">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+      </svg>
+  </div>
+</div>
+
+
+<!-- LIST CARDS -->
+
+<div class="cards-container">
+
+<% @lists.each do |list| %>
+    <div class="card-list">
+      <h2> <%= list.name %>  </h2>
+      <p> <%= link_to "See the list", list_path(list) %> </p>
+     </div>
+  <% end %>
+
+
 </div>

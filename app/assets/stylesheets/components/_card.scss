@@ -1,0 +1,20 @@
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-list{
+  width: 350px;
+  background-color: rgba(185, 185, 185, 0.097);
+  border-radius: 5px;
+  margin: 40px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 16px;
+  justify-content: center;
+
+
+  h2{
+    font-family: $roboto-font;
+    font-weight: bold;
+  }
+}

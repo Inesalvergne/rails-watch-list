@@ -1,0 +1,58 @@
+.custom-shape-divider-bottom-1650582608 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1650582608 svg {
+  position: relative;
+  display: block;
+  width: calc(131% + 1.3px);
+  height: 149px;
+}
+
+.custom-shape-divider-bottom-1650582608 .shape-fill {
+  fill: #FFFFFFF2;
+}
+
+.banner-background{
+  background-color: #D1E6E4;
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.banner-title{
+  margin-top: 60px;
+  margin-left: 100px;
+  font-family: $roboto-font;
+
+  h1{
+    font-weight: bolder;
+    font-size: 60px;
+  }
+
+  p{
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
+.banner-image{
+  margin-top: 30px;
+  margin-right: 100px;
+}
+
+
+.btn{
+  margin-top: 20px;
+  background-color: #309A8A;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+}
