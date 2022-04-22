@@ -45,10 +45,14 @@
 <div class="cards-container">
 
 <% @lists.each do |list| %>
-    <div class="card-list">
-      <h2> <%= list.name %>  </h2>
-      <p> <%= link_to "See the list", list_path(list) %> </p>
-     </div>
+    <%= link_to list_path(list) do %>
+      <div class="card-wrapper">
+        <%= image_tag "movie-image.jpg", alt: "movie background", width: 350, height: 200 %>
+        <div class= "card-info">
+          <h2> <%= list.name %>  </h2>
+        </div>
+      </div>
+    <% end %>
   <% end %>
 
 
