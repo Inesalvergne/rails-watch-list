@@ -1,0 +1,30 @@
+#new_bookmark {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  max-width: 60%;
+  background-color: white;
+  margin-top: -50px ;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 50px;
+  border: thin solid rgba(0,0,0,.2);
+
+  label{
+    font-family: $roboto-font;
+    color: black;
+    font-weight: 600;
+  }
+}
+
+.btn-form{
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #309A8A;
+  color: white;
+  padding: 5px;
+  width: 170px;
+  height: 50px;
+  margin-top: 30px;
+}

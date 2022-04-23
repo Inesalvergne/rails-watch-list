@@ -1,10 +1,10 @@
-.banner {
+.banner-list {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
 }
 
-.banner h1 {
+.banner-list h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -12,9 +12,22 @@
   font-weight: bold;
 }
 
-.banner p {
+.banner-list p {
   font-size: 20px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+.banner-list-container{
+  text-align: center;
+
+  h1{
+    font-weight: bolder;
+    font-size: 48px;
+    font-family: $roboto-font;
+    letter-spacing: 5px;
+  }
+
 }

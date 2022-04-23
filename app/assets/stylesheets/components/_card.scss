@@ -1,17 +1,14 @@
 .cards-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   margin-bottom: 100px;
+  margin-left: 50px;
 }
 
-.card-wrapper{
+.card-wrapper-list{
   width: 350px;
-  background-color: rgba(185, 185, 185, 0.097);
   border-radius: 5px;
   margin: 40px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  justify-content: center;
 
   h2{
     font-family: $roboto-font;
@@ -21,7 +18,12 @@
   }
 
   .card-info{
-    padding: 16px;
+    padding-top: 16px;
+  }
+
+  img {
+    border-radius: 8px;
+    object-fit: cover;
   }
 }
 
@@ -29,10 +31,14 @@ a {
   text-decoration: none;
 }
 
-.card-wrapper:hover{
+.card-wrapper-list:hover{
 
   h2 {
    color: rgba(0, 0, 0, 0.694);
  }
+
+ img{
+  filter: brightness(.8);
+}
 
 }

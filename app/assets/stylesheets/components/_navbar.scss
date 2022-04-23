@@ -11,6 +11,13 @@
   width: 40px;
 }
 
-.navbar-lewagon .nav-item .active{
-  color: #309A8A;
+.navbar-lewagon #navbarSupportedContent{
+  margin-right: 20px;
+}
+
+.navbar-lewagon li a {
+    color: #309A8A;
+    font-size: 18px;
+    font-family: $roboto-font;
+    font-weight: bold;
 }

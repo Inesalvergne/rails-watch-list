@@ -18,24 +18,41 @@
   </div>
 </div>
 
+
+    <%# <%= link_to "Add a movie", new_list_bookmark_path(@list) %>
+
+
+
 <!-- BANNER -->
 <%# <div class="banner" style="background-image: url('<%= cl_image_tag @list.photo.key %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2056&q=80')">
-  <div class="container">
+<div class="banner-list" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2056&q=80')">
+  <div class="banner-list-container">
     <h1> <%= @list.name %> </h1>
-    <button type="button" class="btn"> <%= link_to "Add a movie", new_list_bookmark_path(@list) %> </button>
   </div>
 </div>
 
+<!-- Add a movie form -->
+<%= simple_form_for [ @list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit "Add movie to the list", class: "btn-form" %>
+<% end %>
+
+
+
+
 <!-- MOVIE CARD -->
 
+<div class="cards-container">
 
 <% @list.movies.each do |movie| %>
-    <div class="card-wrapper">
-      <%= image_tag movie.poster_url, alt: "movie background", width: 350, height: 200 %>
+    <div class="card-wrapper-list">
+      <%= image_tag movie.poster_url, alt: "movie background", width: 350, height: 380 %>
       <div class= "card-info">
         <h2> <%= movie.title %>  </h2>
         <p> <%= movie.overview %> </p>
       </div>
      </div>
   <% end %>
+
+</div>

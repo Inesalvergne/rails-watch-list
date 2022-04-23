@@ -35,11 +35,14 @@
   h1{
     font-weight: bolder;
     font-size: 60px;
+    font-family: $roboto-font;
+    letter-spacing: px;
   }
 
   p{
     margin-top: 10px;
     font-size: 20px;
+    font-family: $roboto-font;
   }
 }
 

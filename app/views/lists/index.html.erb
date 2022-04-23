@@ -47,7 +47,7 @@
 
 <% @lists.each do |list| %>
     <%= link_to list_path(list) do %>
-      <div class="card-wrapper">
+      <div class="card-wrapper-list">
            <%= cl_image_tag list.photo.key, height: 300, width: 350, crop: :fill %>
         <div class= "card-info">
           <h2> <%= list.name %>  </h2>
