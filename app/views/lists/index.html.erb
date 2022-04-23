@@ -21,6 +21,7 @@
           <div class="modal-body">
             <%= simple_form_for [@list] do |f| %>
                 <%= f.input :name %>
+                <%= f.input :photo, as: :file %>
                 <%= f.submit "Create list", class: "btn btn-primary" %>
             <% end %>
           </div>
@@ -47,7 +48,7 @@
 <% @lists.each do |list| %>
     <%= link_to list_path(list) do %>
       <div class="card-wrapper">
-        <%= image_tag "movie-image.jpg", alt: "movie background", width: 350, height: 200 %>
+           <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
         <div class= "card-info">
           <h2> <%= list.name %>  </h2>
         </div>
