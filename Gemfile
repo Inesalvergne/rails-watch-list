@@ -5,6 +5,8 @@ ruby '3.0.3'
 
 #create environment for security purpose
 gem 'dotenv-rails', groups: [:development, :test]
+# cloudinary for image upload
+gem 'cloudinary', '~> 1.16.0'
 # frontend set up
 gem "autoprefixer-rails", "10.2.5"
 gem "font-awesome-sass", "~> 5.15"
