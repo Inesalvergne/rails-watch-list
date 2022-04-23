@@ -22,5 +22,5 @@ classic = List.create(name: "Classic movies")
 classic.photo.attach(io: classic_photo, filename: 'classic.png', content_type: 'image/png')
 
 action_photo = URI.open('https://images.unsplash.com/photo-1534188278934-76700c2da08b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')
-action = List.create(name: "Best French Movies")
+action = List.create(name: "Action Movies")
 action.photo.attach(io: action_photo, filename: 'action.png', content_type: 'image/png')
